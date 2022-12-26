@@ -12,6 +12,28 @@ const USER_CONFIG = {
 
   // 使用微信测试号：公众号APP_SECRET
   APP_SECRET: '216188431f95fa3fa54309d07cb688bd',
+  
+  // 功能开关,打开：true，关闭：false
+  SWITCH: {
+    /** 每日天气 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    weather: true,
+
+    // 每日一言, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    oneTalk: true,
+    
+    // 土味情话(彩虹屁), 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    earthyLoveWords: true,
+    
+    /** 星座运势 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    horoscope: true,
+    
+  },
+  
+  TIAN_API: {
+    // 天行API KEY，如果使用天行API则需要填写此项
+    key: '2a4aa4c3821962acb70fe4751e3809ee',
 
   PROVINCE: '山东',
   CITY: '青岛',
@@ -23,7 +45,7 @@ const USER_CONFIG = {
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: 'oeVv56einF6XvOJPhAUkm-oAMP1I',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
-      useTemplateId: 'Jopnz0o9ggZsIGH2f4yUzAXWyXsYLibI0viTAy9g4a0',
+      useTemplateId: 'DvmBBwhPeWVTAVVnfkZL27vQSE4HhqXvOGmGSIfuBII',
       // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
       horoscopeDate: '03-29',
       festivals: [
