@@ -40,7 +40,6 @@ const USER_CONFIG = {
       city: '石家庄',
       horoscopeDate: '03-20',
       horoscopeDateType: '',
-      openUrl: 'https://wangxinleo.cn',
       festivals: [
         {
           type: '*生日', name: '自己', year: '2000', date: '02-15',
