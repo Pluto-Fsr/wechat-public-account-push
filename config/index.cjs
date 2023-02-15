@@ -31,15 +31,23 @@ const USER_CONFIG = {
         {
           type: '*生日', name: '宝贝', year: '2000', date: '02-24',
         },
-      },
-   ],
-        
+        // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+        {
+          type: '', name: '', year: '', date: '',
+        },
+        {
+          type: '', name: '', year: '', date: '',
+        },
+      ],
       // 我们在一起已经有xxxx天了的配置
       customizedDateList: [
         // 在一起的日子
         { keyword: 'love_day', date: '2022-03-15' },
+       
       ],
+    },
   ],
+
 
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
   CALLBACK_TEMPLATE_ID: 'ib1Yig0REX_gN4I346lwxocc8qXLTx9VSWatuUcm558',
@@ -50,10 +58,8 @@ const USER_CONFIG = {
       // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: 'oeVv56einF6XvOJPhAUkm-oAMP1I',
     }
-       
   ],
 
 }
 
 module.exports = USER_CONFIG
-
