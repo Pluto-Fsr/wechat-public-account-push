@@ -4,8 +4,7 @@
  * 此项目配置为方便新人使用，已缩减至最简配置。
  * 如若想使用更多功能，请查考文档中的 【3. config参数说明】 
  * 自行添加属性，以支持更多个性化功能
- */
-const USER_CONFIG = {
+
 
  /* eslint-disable */
 const USER_CONFIG = {
@@ -152,9 +151,9 @@ const USER_CONFIG = {
       //   }
       // ],
       // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
-      customizedDateList: [
+      // customizedDateList: [
         // 在一起的日子
-        { keyword: 'love_day', date: '2024-11-26' },
+        // { keyword: 'love_day', date: '2024-11-26' },
         // 结婚纪念日
         //{ keyword: 'marry_day', date: '2022-09-09' },
         // 退伍日
@@ -283,7 +282,6 @@ const USER_CONFIG = {
     // 你可以不断按格式往下增加
     // ...
   ],
-}
 
 
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
