@@ -1,12 +1,4 @@
 /* eslint-disable */
-
-/**
- * 此项目配置为方便新人使用，已缩减至最简配置。
- * 如若想使用更多功能，请查考文档中的 【3. config参数说明】 
- * 自行添加属性，以支持更多个性化功能
-
-
- /* eslint-disable */
 const USER_CONFIG = {
   /**
    * 基本配置
@@ -49,22 +41,22 @@ const USER_CONFIG = {
 
     /** 每日N句 */
     // 金山每日一句, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    CIBA: true,
+    CIBA: false,
     
     // 每日一言, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    oneTalk: true,
+    oneTalk: false,
     
     // 土味情话(彩虹屁), 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
     earthyLoveWords: true,
     
     // 朋友圈文案, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    momentCopyrighting: true,
+    momentCopyrighting: false,
     
     // 毒鸡汤, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    poisonChickenSoup: true,
+    poisonChickenSoup: false,
     
     // 古诗古文, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    poetry: true,
+    poetry: false,
 
     /** 星座运势 */
     // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
@@ -76,19 +68,19 @@ const USER_CONFIG = {
   
     /** 学生课表 */
     // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    courseSchedule: true,
+    courseSchedule: false,
   },
   
   TIAN_API: {
     // 天行API KEY，如果使用天行API则需要填写此项
-    key: '',
+    key: '2a4aa4c3821962acb70fe4751e3809ee',
     
     /** 天行API相关，需要config中配置 TIAN_API_KEY  */
     // 早安心语, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    morningGreeting: true,
+    morningGreeting: false,
   
     // 晚安心语, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    eveningGreeting: true,
+    eveningGreeting: false,
   
     // 天行天气（展示未来N天，最多7天）, 填 0 则不使用，按需关闭不使用的功能可以提高运行速度
     weather: 3,
@@ -116,13 +108,13 @@ const USER_CONFIG = {
   USERS: [
     {
       // 想要发送的人的名字
-      name: '爱妻,
+      name: '洗衣粉儿',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       // 使用其他通道时，请严格按照各个通道的教程进行填写
       id: 'ok0W02yQlvuTxWsVduIXOP1gov20',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
       // 使用其他通道时，请填写 config/template-config.cjs 中某个想要使用的模板的id
-      useTemplateId: ' ',
+      useTemplateId: '0001',
       // 所在省份或城市，也可以不填
       province: '石家庄',
       // 所在城市或县区
@@ -132,35 +124,141 @@ const USER_CONFIG = {
       // 获取什么时候的星座运势，可选：['今日', '明日', '本周', '本月', '今年'], 留空则随机
       horoscopeDateType: '今日',
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
-      openUrl: 'https://s.weibo.com/top/summary',
+      openUrl: 'https://',
       // 专属节日提醒，如果你在这里填写了节日提醒，就不会执行FESTIVALS的提醒了, 和FESTIVALS的配置方法相同，可以往下查看，我这里就不重复写了
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
           type: '*生日', name: '老婆', year: '2001', date: '01-17',
         },
-       // {
-          //type: '节日', name: '结婚纪念日', year: '2020', date: '09-03',
-        //},
-        // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
-      //   {
-      //     type: '生日', name: '李四', year: '1996', date: '09-31',
-      //   },
-      //   {
-      //     type: '节日', name: '被搭讪纪念日', year: '2021', date: '09-01',
-      //   }
-      // ],
-      // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
-      // customizedDateList: [
-        // 在一起的日子
-        // { keyword: 'love_day', date: '2024-11-26' },
-        // 结婚纪念日
-        //{ keyword: 'marry_day', date: '2022-09-09' },
-        // 退伍日
-        //{ keyword: 'ex_day', date: '2022-09-10' }
+        // {
+        //   type: '节日', name: '结婚纪念日', year: '2020', date: '09-03',
+        // },
+        // // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+        // {
+        //   type: '生日', name: '李四', year: '1996', date: '09-31',
+        // },
+        // {
+        //   type: '节日', name: '被搭讪纪念日', year: '2021', date: '09-01',
+        // }
       ],
-     
-
+      // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
+      customizedDateList: [
+        // 在一起的日子
+        { keyword: 'love_day', date: '2024-11-26' },
+        // // 结婚纪念日
+        // { keyword: 'marry_day', date: '2022-09-09' },
+        // // 退伍日
+        // { keyword: 'ex_day', date: '2022-09-10' }
+      ],
+      // 课程表相关配置
+      // 如果courseSchedule不存在或者为空（null）则认为没有课程
+      // 如果courseSchedule是一个数组，则认为不区分单双周，直接填写星期几对应的课表数据即可
+      // 如果courseSchedule是一个对象（如下面所示）
+      courseSchedule: {
+        // 单双周的基准
+        benchmark: {
+          // 这里设置一个日期，用来作为判断课表是否单双周的依据
+          date: '2022-09-23',
+          // 该日期是否为单周
+          isOdd: true
+        },
+        // 课表
+        courses: {
+          // 单周课表
+          // 从星期一到星期日（星期六和星期日的课表数组可不填写）
+          odd: [
+            // 例子，周一的课表
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周二
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周三
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周四
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周五
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周六
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ],
+            // 周日
+            [
+              '08:00-09:35 高等数学',
+              '09:50-11:25 高等物理'
+            ]
+          ],
+          // 双周课表
+          even: [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        }
+      },
+    },
+    {
+      name: '老婆1',
+      id: '',
+      useTemplateId: '',
+      province: '',
+      city: '',
+      horoscopeDate: '',
+      horoscopeDateType: '',
+      openUrl: 'https://wangxinleo.cn',
+      festivals: [],
+      customizedDateList: [],
+      courseSchedule: null
+    },
+    {
+      name: '老婆2',
+      id: '',
+      useTemplateId: '',
+      province: '',
+      city: '',
+      horoscopeDate: '',
+      horoscopeDateType: '',
+      openUrl: 'https://wangxinleo.cn',
+      festivals: [],
+      customizedDateList: [],
+      courseSchedule: null
+    },
+    {
+      name: '老婆3',
+      id: '',
+      useTemplateId: '',
+      province: '',
+      city: '',
+      horoscopeDate: '',
+      horoscopeDateType: '',
+      openUrl: 'https://wangxinleo.cn',
+      festivals: [],
+      customizedDateList: [],
+      courseSchedule: null
+    }
+    // 你可以不断按格式往下增加
+    // ...
+  ],
 
   /**
    * 【推送完成提醒】 相关，主要用来展示发送是否成功/失败的数据
@@ -168,7 +266,7 @@ const USER_CONFIG = {
 
   // 使用微信测试号：【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
   // 使用其他通道时，请填写 config/template-config.cjs 中【推送完成提醒】模板的id
-  CALLBACK_TEMPLATE_ID: '3cIbi9nw7aqehNDaxpts6M4nfynwxaTOS8n8fTaI74o',
+  CALLBACK_TEMPLATE_ID: '0002',
 
   // 接收成功回调消息的微信号，（一般来说只填自己的微信号, name填不填无所谓）
   CALLBACK_USERS: [
@@ -177,7 +275,7 @@ const USER_CONFIG = {
       name: '自己',
       // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       // 使用其他通道时，请严格按照各个通道的教程进行填写
-      id: 'ok0W025kc0T2xmtQ_Wfh9DjjRPyg',
+      id: '3cIbi9nw7aqehNDaxpts6M4nfynwxaTOS8n8fTaI74o',
     }
     // 你可以不断按格式往下增加
     // ...
@@ -199,9 +297,9 @@ const USER_CONFIG = {
    * */
   
   // 默认所在省份, USERS 中没填的话, 会默认拿这里的省份
-  PROVINCE: '河北',
+  PROVINCE: '咸阳',
   // 默认所在城市, USERS 中没填的话, 会默认拿这里的城市
-  CITY: '石家庄',
+  CITY: '长武',
 
   /** 重要节日相关 */
 
@@ -225,10 +323,18 @@ const USER_CONFIG = {
   FESTIVALS: [
     // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
     {
-      type: '*生日', name: '老婆', year: '2001', date: '01-17', isShowAge: true,
+      type: '*生日', name: '老婆', year: '1996', date: '09-09', isShowAge: true,
     },
-    
- 
+    {
+      type: '节日', name: '结婚纪念日', year: '2020', date: '09-03',
+    },
+    // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+    {
+      type: '生日', name: '李四', year: '1996', date: '09-31', isShowAge: true,
+    },
+    {
+      type: '节日', name: '被搭讪纪念日', year: '2021', date: '09-01',
+    }
     // 你可以不断按格式往下增加
     // ...
   ],
@@ -246,13 +352,13 @@ const USER_CONFIG = {
    * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
    * 比如：keyword: "love_date" ，在测试号中就是 {{ love_date.DATA }}
    * */
-  //CUSTOMIZED_DATE_LIST: [
+  CUSTOMIZED_DATE_LIST: [
     // 在一起的日子
-    //{ keyword: 'love_day', date: '2024-11-26' },
+    { keyword: 'love_day', date: '2022-09-08' },
     // 结婚纪念日
-    //{ keyword: 'marry_day', date: '2022-09-09' },
+    { keyword: 'marry_day', date: '2022-09-09' },
     // 退伍日
-    //{ keyword: 'ex_day', date: '2022-09-10' }
+    { keyword: 'ex_day', date: '2022-09-10' }
     // 你可以不断按格式往下增加
     // ...
   ],
@@ -282,19 +388,7 @@ const USER_CONFIG = {
     // 你可以不断按格式往下增加
     // ...
   ],
-
-
-  // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: 'ib1Yig0REX_gN4I346lwxocc8qXLTx9VSWatuUcm558',
-
-  CALLBACK_USERS: [
-    {
-      name: '自己',
-      // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: 'oeVv56einF6XvOJPhAUkm-oAMP1I',
-    }
-  ],
-
 }
 
 module.exports = USER_CONFIG
+
